@@ -6,7 +6,7 @@ interface IUser extends Document {
   password: string;
   thoughts: Schema.Types.ObjectId[];
   friends: Schema.Types.ObjectId[];
-  
+
 }
 //do we need this interface? I was cconfused in the readme
 //so no seed folder?
@@ -14,44 +14,44 @@ interface IUser extends Document {
 // 
 
 const userSchema = new Schema(
-    {
-      username: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true,
-      },
-      email: {
-        type: String,
-        required: true,
-        unique: true,
-        match: [/.+@.+\..+/, 'Please enter a valid email address'],
-      },
-      thoughts: [
-        {
-          type: Schema.Types.ObjectId,
-          ref: 'Thought',
-        },
-      ],
-      friends: [
-        {
-          type: Schema.Types.ObjectId,
-          ref: 'User',
-        },
-      ],
+  {
+    username: {
+      type: String,
+      required: true,
+      unique: true,
+      trim: true,
     },
-    {
-      toJSON: {
-        virtuals: true, 
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      match: [/.+@.+\..+/, 'Please enter a valid email address'],
+    },
+    thoughts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Thought',
       },
-      id: false, 
-    }
-  );
+    ],
+    friends: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+      },
+    ],
+  },
+  {
+    toJSON: {
+      virtuals: true,
+    },
+    id: false,
+  }
+);
 
-  userSchema.virtual('friendCount').get(function() {
-    return this.friends.length;
-  });
+userSchema.virtual('friendCount').get(function () {
+  return this.friends.length;
+});
 
-    const User = model<IUser>('User', userSchema);
+const User = model<IUser>('User', userSchema);
 
-    export default User;
+export { User };
