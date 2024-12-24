@@ -1,5 +1,6 @@
 import express from 'express';
 import routes from './routes/index.js';
+import db from './config/connections.js';
 
 
 
@@ -11,6 +12,8 @@ app.use(express.json());
 
 app.use(routes);
 
+db.once('open', () => {
 app.listen(PORT, () => {
   console.log(`API server running on port ${PORT}!`);
+});
 });
