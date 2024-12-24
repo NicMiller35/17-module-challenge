@@ -12,7 +12,7 @@ This project is a NoSQL social network api. Where you can POST, DELETE, UPDATE, 
 ## Usage
 
 - Github repo: <https://github.com/NicMiller35/14--module-challenge>
-- Link to video: <>
+- Link to video: <https://drive.google.com/file/d/1w1HDav-Qlseny0Z3exxwW3Fgo9fl-dFT/view>
 
 ## Contribution
 Nic Miller
