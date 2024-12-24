@@ -11,7 +11,7 @@ This project is a NoSQL social network api. Where you can POST, DELETE, UPDATE, 
 - [Questions](#questions)
 ## Usage
 
-- Github repo: <https://github.com/NicMiller35/14--module-challenge>
+- Github repo: <https://github.com/NicMiller35/17-module-challenge>
 - Link to video: <https://drive.google.com/file/d/1w1HDav-Qlseny0Z3exxwW3Fgo9fl-dFT/view>
 
 ## Contribution
