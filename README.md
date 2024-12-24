@@ -10,8 +10,9 @@ This project is a NoSQL social network api. Where you can POST, DELETE, UPDATE, 
 - [Tests](#tests)
 - [Questions](#questions)
 ## Usage
-![alt text](client/src/assets/shot.png)
+
 - Github repo: <https://github.com/NicMiller35/14--module-challenge>
+- Link to video: <>
 
 ## Contribution
 Nic Miller
